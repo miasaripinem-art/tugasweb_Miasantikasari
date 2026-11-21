@@ -1,0 +1,572 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPL SMKN 9 Medan</title>
+    <link rel="stylesheet" href="style.css">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="brand">
+            <img src="logosmkn.png" alt="Logo SMKN 9 Medan">
+            <div class="logo">RPL SMKN 9 MEDAN</div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#">Beranda</a>
+            <a href="#">Kurikulum</a>
+            <a href="#">Karya Siswa</a>
+            <a href="#">Kontak</a>
+        </nav>
+
+        <button class="hamburger-btn" aria-label="Menu">
+            &#9776;
+        </button>
+
+    </header>
+
+
+    <!-- SIDEBAR KIRI -->
+    <aside class="sidebar-kiri">
+        <h3>Menu Cepat</h3>
+        <ul>
+            <li>Jadwal Praktikum</li>
+            <li>Modul Pemrograman Web</li>
+            <li>Daftar Lab RPL</li>
+            <li>Info PKL & LSP</li>
+        </ul>
+    </aside>
+
+
+    <!-- KONTEN UTAMA -->
+    <main class="konten-utama">
+
+        <h2>Berita & Proyek Terbaru Kelas XII RPL</h2>
+
+        <div class="card-grid">
+
+            <!-- KARTU 1 -->
+            <article class="card">
+                <img src="kitakale.jpeg" alt="Belajar Bersama Guru Tamu Industri">
+                <h4>Belajar Bersama Guru Tamu Industri</h4>
+                <p>Siswa XII RPL 2 belajar dengan guru tamu dari Perusahan Kita Kale</p>
+            </article>
+
+            <!-- KARTU 2 -->
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600" alt="Portal CBT Online">
+                <h4>Portal CBT Online</h4>
+                <p>Platform ujian berbasis komputer yang adaptif pada desktop lab maupun smartphone.</p>
+            </article>
+
+            <!-- KARTU 3 -->
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" alt="E-Katalog Produk PKK">
+                <h4>E-Katalog Produk PKK</h4>
+                <p>Etalase digital karya kreatif siswa jurusan Rekayasa Perangkat Lunak.</p>
+            </article>
+
+            <!-- KARTU 4 -->
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600" alt="Proyek Website">
+                <h4>Proyek Website Sekolah</h4>
+                <p>Pengembangan website sekolah sebagai media informasi dan komunikasi digital.</p>
+            </article>
+
+            <!-- KARTU 5 -->
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=600" alt="Pembelajaran Coding">
+                <h4>Belajar Coding</h4>
+                <p>Kegiatan belajar HTML, CSS, dan JavaScript untuk meningkatkan kemampuan pemrograman siswa.</p>
+            </article>
+
+            <!-- KARTU 6 -->
+            <article class="card">
+                <img src="pkl.jpeg" alt="Praktik Kerja Lapangan">
+                <h4>Praktik Kerja Lapangan</h4>
+                <p>Siswa RPL mengenal dunia industri dan mengembangkan keterampilan melalui pengalaman kerja secara langsung</p>
+            </article>
+
+        </div>
+    </main>
+
+
+    <!-- WIDGET PROMO KANAN -->
+    <aside class="widget-promo">
+        <h3>Info & Promo Lab</h3>
+
+        <div class="promo-box">
+            <strong>Uji Kompetensi LSP!</strong>
+            <p>Persiapkan portofolio web responsif kalian sebelum jadwal asesmen.</p>
+        </div>
+    </aside>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 Jurusan RPL SMK Negeri 9 Medan – Modul Pemrograman Web Lanjut</p>
+    </footer>
+
+</div>
+
+<!-- =================================
+     CHATBOT SMKN 9 MEDAN
+================================= -->
+
+<style>
+/* TOMBOL CHAT */
+.chat-toggle {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #c99be8, #9bbcf2);
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(100,70,140,0.25);
+    z-index: 9999;
+}
+
+/* KOTAK CHAT */
+.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 95px;
+    right: 22px;
+    width: 350px;
+    max-width: calc(100vw - 30px);
+    height: 500px;
+    max-height: 70vh;
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(100,70,140,0.2);
+    z-index: 9999;
+    flex-direction: column;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+.chat-box.active {
+    display: flex;
+}
+
+/* HEADER CHAT */
+.chat-header {
+    background: linear-gradient(120deg, #c99be8, #a9c9f3);
+    color: white;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-header h3 {
+    font-size: 16px;
+}
+
+.chat-header p {
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.chat-close {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+/* ISI CHAT */
+.chat-messages {
+    flex: 1;
+    padding: 14px;
+    overflow-y: auto;
+    background: #faf7fd;
+}
+
+.bot-message,
+.user-message {
+    padding: 11px 13px;
+    border-radius: 13px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 90%;
+    white-space: pre-line;
+}
+
+.bot-message {
+    background: #eee4f8;
+    color: #514064;
+    border-bottom-left-radius: 3px;
+    margin-right: auto;
+}
+
+.user-message {
+    background: #dceafe;
+    color: #344c75;
+    border-bottom-right-radius: 3px;
+    margin-left: auto;
+}
+
+/* PERTANYAAN CEPAT */
+.quick-questions {
+    padding: 10px;
+    background: white;
+    border-top: 1px solid #eee;
+}
+
+.quick-questions p {
+    font-size: 11px;
+    color: #80629d;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.quick-questions button {
+    background: #f2e9fa;
+    color: #76569a;
+    border: 1px solid #ddc9ef;
+    padding: 7px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.quick-questions button:hover {
+    background: #d9c2f0;
+}
+
+/* INPUT CHAT */
+.chat-input-area {
+    display: flex;
+    padding: 11px;
+    gap: 8px;
+    background: white;
+    border-top: 1px solid #eee;
+}
+
+.chat-input-area input {
+    flex: 1;
+    min-width: 0;
+    padding: 11px;
+    border: 1px solid #dfcbed;
+    border-radius: 20px;
+    outline: none;
+    font-size: 12px;
+}
+
+.chat-input-area input:focus {
+    border-color: #ad85d3;
+}
+
+.chat-input-area button {
+    background: #ad85d3;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 600px) {
+    .chat-box {
+        right: 10px;
+        bottom: 85px;
+        width: calc(100vw - 20px);
+        height: 450px;
+        max-height: 70vh;
+    }
+
+    .chat-toggle {
+        right: 15px;
+        bottom: 15px;
+    }
+}
+</style>
+
+
+<!-- TOMBOL CHAT -->
+<button class="chat-toggle" id="chatToggle"
+aria-label="Buka chatbot">
+    💬
+</button>
+
+
+<!-- KOTAK CHAT -->
+<div class="chat-box" id="chatBox">
+
+    <div class="chat-header">
+        <div>
+            <h3>Asisten SMKN 9 Medan</h3>
+            <p>Informasi Sekolah & Jurusan RPL</p>
+        </div>
+
+        <button class="chat-close" id="chatClose">
+            &times;
+        </button>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+        <div class="bot-message">
+            Halo! 👋 Selamat datang di SMKN 9 Medan.
+
+            Saya adalah asisten virtual yang siap membantu menjawab pertanyaan tentang sekolah dan jurusan RPL.
+
+            Silakan pilih pertanyaan di bawah atau ketik pertanyaanmu!
+        </div>
+    </div>
+
+    <!-- PERTANYAAN CEPAT -->
+    <div class="quick-questions">
+        <p>PERTANYAAN POPULER</p>
+
+        <button onclick="quickAsk('Alamat SMKN 9 Medan')">
+            Alamat Sekolah
+        </button>
+
+        <button onclick="quickAsk('Apa saja jurusan di SMKN 9 Medan')">
+            Jurusan
+        </button>
+
+        <button onclick="quickAsk('Apa itu RPL')">
+            Tentang RPL
+        </button>
+
+        <button onclick="quickAsk('Prospek kerja RPL')">
+            Prospek Kerja
+        </button>
+    </div>
+
+    <!-- INPUT -->
+    <div class="chat-input-area">
+        <input
+            type="text"
+            id="chatInput"
+            placeholder="Tulis pertanyaan kamu..."
+        >
+
+        <button onclick="sendMessage()">
+            ➤
+        </button>
+    </div>
+
+</div>
+
+
+<script>
+// =================================
+// MEMBUKA DAN MENUTUP CHAT
+// =================================
+
+const chatBox = document.getElementById("chatBox");
+const chatToggle = document.getElementById("chatToggle");
+
+chatToggle.onclick = function() {
+    chatBox.classList.toggle("active");
+};
+
+document.getElementById("chatClose").onclick = function() {
+    chatBox.classList.remove("active");
+};
+
+
+// =================================
+// MENAMPILKAN PESAN
+// =================================
+
+function addMessage(message, type) {
+    const messages = document.getElementById("chatMessages");
+
+    const div = document.createElement("div");
+    div.className = type + "-message";
+
+    // Mencegah teks pengguna dibaca sebagai HTML
+    div.textContent = message;
+
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+}
+
+
+// =================================
+// DATABASE PERTANYAAN CHATBOT
+// =================================
+
+function getAnswer(question) {
+
+    const q = question.toLowerCase();
+
+    // ALAMAT SEKOLAH
+    if (q.includes("alamat") || q.includes("lokasi")) {
+        return "SMKN 9 Medan beralamat di:\n\nJl. Patriot No. 20 A, Kelurahan Lalang, Kecamatan Medan Sunggal, Kota Medan, Sumatera Utara 20123.";
+    }
+
+    // KEPALA SEKOLAH
+    if (q.includes("kepala sekolah") || q.includes("kepsek")) {
+        return "Kepala SMKN 9 Medan adalah Ibu Cahyani Monalista Harefa, S.Pd., M.Si.";
+    }
+
+    // DAFTAR JURUSAN
+    if (q.includes("jurusan") || q.includes("program keahlian")) {
+        return "SMKN 9 Medan memiliki beberapa jurusan:\n\n1. Teknik Komputer dan Jaringan (TKJ)\n2. Rekayasa Perangkat Lunak (RPL)\n3. Animasi (AN)\n4. Desain Komunikasi Visual (DKV)\n5. Produksi Siaran dan Program Televisi (PSPT)\n6. Pekerja Sosial (PS).\n\nSetiap jurusan memiliki bidang keahlian yang berbeda.";
+    }
+
+    // APA ITU RPL
+    if (q.includes("apa itu rpl") || q.includes("pengertian rpl") || q.includes("rpl adalah")) {
+        return "RPL adalah singkatan dari Rekayasa Perangkat Lunak.\n\nRPL merupakan jurusan yang mempelajari proses pembuatan, pengembangan, pengujian, dan pemeliharaan perangkat lunak.\n\nSiswa RPL belajar membuat website, aplikasi, mengelola database, serta merancang tampilan aplikasi (UI/UX).";
+    }
+
+    // MATERI RPL
+    if (q.includes("materi") || q.includes("dipelajari") || q.includes("pelajaran") || q.includes("belajar rpl")) {
+        return "Materi yang umum dipelajari di bidang RPL antara lain:\n\n1. HTML untuk membuat struktur website.\n2. CSS untuk mengatur tampilan website.\n3. JavaScript untuk membuat website interaktif.\n4. PHP untuk pemrograman web.\n5. Database dan SQL.\n6. UI/UX Design.\n7. Algoritma dan pemrograman.\n8. Pengembangan aplikasi.\n\nMateri dan urutan pembelajaran mengikuti kurikulum sekolah.";
+    }
+
+    // PROSPEK KERJA
+    if (q.includes("prospek") || q.includes("kerja rpl") || q.includes("lulusan rpl") || q.includes("karier")) {
+        return "Lulusan RPL memiliki berbagai peluang karier, misalnya:\n\n1. Web Developer\n2. Front-End Developer\n3. Back-End Developer\n4. Software Developer\n5. UI/UX Designer\n6. Database Administrator\n7. Quality Assurance Tester\n8. Mobile App Developer.\n\nLulusan juga dapat melanjutkan pendidikan ke perguruan tinggi atau mengembangkan usaha di bidang teknologi.";
+    }
+
+    // STATISTIK SEKOLAH
+    if (q.includes("statistik") || q.includes("jumlah siswa") || q.includes("jumlah guru") || q.includes("data sekolah")) {
+        return "Berikut statistik SMKN 9 Medan berdasarkan data yang tersedia:\n\nGuru: 98 orang\nSiswa laki-laki: 832 orang\nSiswa perempuan: 1.096 orang\nRuang kelas: 62\nLaboratorium: 17\nPerpustakaan: 1.";
+    }
+
+    // TOTAL SISWA
+    if (q.includes("total siswa")) {
+        return "Berdasarkan data yang tersedia, jumlah siswa laki-laki adalah 832 dan siswa perempuan 1.096. Total keseluruhan adalah 1.928 siswa.";
+    }
+
+    // TKJ
+    if (q.includes("tkj")) {
+        return "Teknik Komputer dan Jaringan (TKJ) mempelajari perakitan komputer, instalasi, serta pembangunan dan pengelolaan jaringan komputer.";
+    }
+
+    // ANIMASI
+    if (q.includes("animasi")) {
+        return "Jurusan Animasi mempelajari pembuatan gambar digital, karakter hidup, modeling 3D, hingga animasi arsitektur.";
+    }
+
+    // DKV
+    if (q.includes("dkv")) {
+        return "Desain Komunikasi Visual (DKV) mempelajari desain grafis, media visual, teknik sablon, dan komunikasi kreatif.";
+    }
+
+    // PSPT
+    if (q.includes("pspt") || q.includes("televisi") || q.includes("broadcasting")) {
+        return "Produksi Siaran dan Program Televisi (PSPT) mempelajari dunia penyiaran, perfilman, teknik kamera, penyutradaraan, dan pembuatan konten.";
+    }
+
+    // PEKERJA SOSIAL
+    if (q.includes("pekerja sosial") || q.includes("perawatan sosial")) {
+        return "Pekerja Sosial atau Perawatan Sosial mempelajari pelayanan sosial dan dasar-dasar ilmu kejiwaan untuk pendampingan anak, bidang medis, maupun lansia.";
+    }
+
+    // WEBSITE
+    if (q.includes("website") || q.includes("web")) {
+        return "Dalam jurusan RPL, siswa belajar membuat website menggunakan HTML, CSS, JavaScript, PHP, dan database. Website dapat digunakan sebagai media informasi, toko online, sistem sekolah, dan lainnya.";
+    }
+
+    // CODING
+    if (q.includes("coding") || q.includes("programming")) {
+        return "Coding adalah kegiatan menulis instruksi menggunakan bahasa pemrograman agar komputer dapat menjalankan suatu perintah. Di RPL, kamu akan belajar dasar-dasar coding secara bertahap.";
+    }
+
+    // UI UX
+    if (q.includes("ui") || q.includes("ux") || q.includes("desain aplikasi")) {
+        return "UI (User Interface) berhubungan dengan tampilan aplikasi, sedangkan UX (User Experience) berhubungan dengan pengalaman dan kenyamanan pengguna saat menggunakan aplikasi.";
+    }
+
+    // PKL
+    if (q.includes("pkl") || q.includes("magang")) {
+        return "PKL atau Praktik Kerja Lapangan merupakan kegiatan pembelajaran di dunia kerja untuk mendapatkan pengalaman dan menerapkan keterampilan yang telah dipelajari di sekolah. Informasi jadwal dan tempat PKL dapat ditanyakan kepada pihak sekolah.";
+    }
+
+    // SALAM
+    if (q.includes("halo") || q.includes("hai") || q.includes("hello")) {
+        return "Halo juga! 👋 Ada yang ingin kamu ketahui tentang SMKN 9 Medan atau jurusan RPL?";
+    }
+
+    // TERIMA KASIH
+    if (q.includes("terima kasih") || q.includes("makasih")) {
+        return "Sama-sama! 😊 Semoga informasi tentang SMKN 9 Medan dan RPL bermanfaat!";
+    }
+
+    // JAWABAN DEFAULT
+    return "Maaf, saya belum memahami pertanyaan tersebut. Coba tanyakan tentang:\n\n• Alamat sekolah\n• Kepala sekolah\n• Daftar jurusan\n• Statistik sekolah\n• Pengertian RPL\n• Materi pembelajaran RPL\n• Prospek kerja RPL\n• Website dan coding.";
+}
+
+
+// =================================
+// MENGIRIM PESAN
+// =================================
+
+function sendMessage() {
+
+    const input = document.getElementById("chatInput");
+    const question = input.value.trim();
+
+    if (question === "") {
+        return;
+    }
+
+    addMessage(question, "user");
+
+    const answer = getAnswer(question);
+
+    setTimeout(function() {
+        addMessage(answer, "bot");
+    }, 400);
+
+    input.value = "";
+}
+
+
+// =================================
+// PERTANYAAN CEPAT
+// =================================
+
+function quickAsk(question) {
+
+    document.getElementById("chatInput").value = question;
+
+    sendMessage();
+}
+
+
+// ENTER UNTUK MENGIRIM
+document.getElementById("chatInput").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        sendMessage();
+    }
+});
+
+</script>
+
+<!-- SELESAI CHATBOT -->
+
+
+</body>
+</html>
